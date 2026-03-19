@@ -6,7 +6,9 @@ const tarefasModel = require("../models/tarefas.model");
 const criarTarefa = (req, res) => {
     // console.log("conteudo", req.body);
     tarefasModel.cadastrarTarefa(req.body).then((status)=>{
-       res.end(status); 
+        console.log(status.affectedRows);
+    //    res.end("Vamos ver no que isso da"); 
+        return res.redirect("/");
     });  
 };
 

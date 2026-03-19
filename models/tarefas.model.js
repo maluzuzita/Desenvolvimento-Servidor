@@ -16,7 +16,7 @@ class Tarefa {
             console.log('tarefas.model.js', 'cadastrarTarefa()');
             console.log("tarefa", tarefa);
             const query = "INSERT INTO tarefas(data, hora, descricao) VALUES (?, ?, ?)";
-            return db.executarQuery(query, [dataTarefa, horaTarefa, descricaoTarefa]);
+            return db.executarQuery(query, [tarefa.dataTarefa, tarefa.horaTarefa, tarefa.descricaoTarefa]);
         }
 }
 
